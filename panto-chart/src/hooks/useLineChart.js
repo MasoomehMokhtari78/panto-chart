@@ -9,7 +9,7 @@ export function useLineChart(
   marginBottom,
   marginLeft
 ) {
-  if (!data || !Array.isArray(data)) return null;
+  if (!Array.isArray(data) || data.length === 0) return null;
 
   const isMultiSeries = Array.isArray(data[0][1]);
 

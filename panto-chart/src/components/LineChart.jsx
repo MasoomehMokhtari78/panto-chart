@@ -47,6 +47,7 @@ export const LineChart = ({
     series.forEach((lineData, i) => {
       svg.append("path")
         .datum(lineData)
+        .attr("class", "data-line")
         .attr("fill", "none")
         .attr("stroke", colors[i % colors.length])
         .attr("stroke-width", 1.5)
