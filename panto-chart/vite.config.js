@@ -4,12 +4,13 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: process.env.VITE_BASE_PATH || "/panto-chart",
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./src/setupTests.js",
     coverage: {
-      reporter: ["text", "html"], // 'text' prints to console, 'html' creates report
+      reporter: ["text", "html"],
       provider: "v8",
     },
   },
