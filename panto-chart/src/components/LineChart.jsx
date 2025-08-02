@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import { useLineChart } from "../hooks/useLineChart";
+import { Card } from "../ui/Card";
 
 const colors = ['blue', 'green', 'red'];
 
@@ -58,5 +59,5 @@ export const LineChart = ({
 
   if (!data) return <p>Loading...</p>;
 
-  return <div><p>{title}</p><svg ref={svgRef} width={width} height={height} /></div>
+  return <Card title={title}><svg ref={svgRef} width={width} height={height} /></Card>
 };
